@@ -1,0 +1,6 @@
+curl -X POST -H "Content-Type: application/json" -d '{
+  "model": "gpt-3.5-turbo-0301",
+  "key": "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",
+  "data_file": "hello-world-2",
+  "out_file": "lol.txt"
+}' http://localhost:8000/generate/
