@@ -7,8 +7,9 @@ WORKDIR /app
 # Copy the requirements file to the container
 COPY requirements.txt .
 
-# Install the required dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# Install the required dependencies of repo and others packages related to APIs
+RUN pip install --no-cache-dir -r requirements.txt uvicorn fastapi
+
 
 # Copy the entire project directory to the container
 COPY . .
@@ -18,4 +19,3 @@ EXPOSE 8000
 
 # Start the FastAPI application when the container is run
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
-
