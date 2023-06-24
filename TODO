@@ -1,0 +1,4 @@
+Deploy this service and try to get the file output to gcs
+Make the service asynchronous 
+Map the volume in some way to retrieve the output
+Deploy the service

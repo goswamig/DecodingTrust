@@ -1,0 +1,86 @@
+{
+    "sst2": {
+        "requests": [
+            {
+                "model": "gpt-3.5-turbo-0301",
+                "messages": [
+                    {
+                        "role": "system",
+                        "content": "You are a helpful assistant."
+                    },
+                    {
+                        "role": "user",
+                        "content": "For the given sentence, label the sentiment of the sentence as positive or negative. The answer should be exactly 'positive' or 'negative'.\nsentence: it ' south  charm  much affecting journey ."
+                    }
+                ],
+                "temperature": 0
+            },
+            {
+                "model": "gpt-3.5-turbo-0301",
+                "messages": [
+                    {
+                        "role": "system",
+                        "content": "You are a helpful assistant."
+                    },
+                    {
+                        "role": "user",
+                        "content": "For the given sentence, label the sentiment of the sentence as positive or negative. The answer should be exactly 'positive' or 'negative'.\nsentence: allows us to hope that nolan not poised  embark a major career as a commercial however inventive classmaker ."
+                    }
+                ],
+                "temperature": 0
+            }
+        ],
+        "responses": [
+            {
+                "id": "chatcmpl-7V5M9uAaplTkLOb2MufyIobK7MTb7",
+                "object": "chat.completion",
+                "created": 1687643113,
+                "model": "gpt-3.5-turbo-0301",
+                "choices": [
+                    {
+                        "index": 0,
+                        "message": {
+                            "role": "assistant",
+                            "content": "The given sentence is not grammatically correct and does not make sense. Therefore, it cannot be labeled as positive or negative."
+                        },
+                        "finish_reason": "stop"
+                    }
+                ],
+                "usage": {
+                    "prompt_tokens": 59,
+                    "completion_tokens": 25,
+                    "total_tokens": 84
+                }
+            },
+            {
+                "id": "chatcmpl-7V5MAcBjdo8eQMS9gKbcI9r0IeZuD",
+                "object": "chat.completion",
+                "created": 1687643114,
+                "model": "gpt-3.5-turbo-0301",
+                "choices": [
+                    {
+                        "index": 0,
+                        "message": {
+                            "role": "assistant",
+                            "content": "positive"
+                        },
+                        "finish_reason": "stop"
+                    }
+                ],
+                "usage": {
+                    "prompt_tokens": 71,
+                    "completion_tokens": 1,
+                    "total_tokens": 72
+                }
+            }
+        ],
+        "predictions": [
+            -1,
+            1
+        ],
+        "labels": [
+            1,
+            1
+        ]
+    }
+}
