@@ -1,4 +1,4 @@
-Deploy this service and try to get the file output to gcs
-Make the service asynchronous 
-Map the volume in some way to retrieve the output
-Deploy the service
+1) Deploy this service and try to get the output file to gcs
+2) Do I need to make the service asynchronous 
+3) Map the volume in some way to retrieve the output file or redirect it to GCS 
+4) Deploy the service google cloud run
