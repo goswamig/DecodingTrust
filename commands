@@ -2,14 +2,14 @@
 1) Build the docker container by running following command 
    docker build -t test .
 
-2) Run the docker command, this will mount the output file in your local /tmp dir 
+2) Run the docker command, this will mount the output file in your local /tmp dir, you should be able to see the file passed in out_file variable from next commands.
    docker run -d -p 8000:8000 -e OPENAI_API_KEY="<your_openai_api_key"" -v /tmp/:/tmp/ test
 
-3) Get the running container id and stream the log 
+3) Get the running container id and stream the log.
    docker ps  # get the container id 
    docker logs -f  <container id>
 
-4) construct the curl command like below, notice tht `key` here does not matter since its not being used but container env variables are being used 
+4) construct the curl command like below, notice tht `key` here does not matter since its not being used but container env variables are being used.
    curl -X POST -H "Content-Type: application/json" -d '{
      "model": "gpt-3.5-turbo-0301",
      "key": "xxxxx",
@@ -17,6 +17,6 @@
      "out_file": "/tmp/alpaca.json"
    }' http://127.0.0.1:8000/generate/
 
-5) you can stop the containers by running below command
+5) you can stop the containers by running below command.
    docker stop $(docker ps -a -q)
 
